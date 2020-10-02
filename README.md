@@ -5,6 +5,7 @@
 - **nginx** - `:8080`
 - **mysql** - `:3308`
 - **php** - `:9000`
+- **laravel 8**
 
 running:
 
