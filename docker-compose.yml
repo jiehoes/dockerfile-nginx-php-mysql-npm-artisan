@@ -36,6 +36,20 @@ services:
     networks:
       - laravel
 
+  sqlite:
+    build:
+      context: .
+      dockerfile: sqlite.dockerfile
+    container_name: sqlite
+    restart: unless-stopped
+    environment:
+      DB_CONNECTION: sqlite
+      DATABASE_URL: database.sqlite
+      SERVICE_TAGS: dev
+      SERVICE_NAME: sqlite
+    networks:
+      - laravel
+
   php:
     build:
       context: .
